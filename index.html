@@ -1,133 +1,31 @@
-<html>
-<head>
-	<title>Lightsaber</title>
-	<script type="text/javascript" src="jquery.js"></script>
-	<script type="text/javascript" src="howler.js"></script>
-	<script type="text/javascript">
-
-		$('document').ready(function(){
-			disp = true;
-			//alert('oi');
-			$('#laser').hide();
-
-			$('#punho').click(ligar);
-
-			var on = new Howl({
-			  urls: ['ltsaberon01.wav'],
-			  autoplay: false,
-			  loop: false,
-			  volume: 1,
-			  onend: function() {
-			  	on.stop();
-			  }
-			});
-
-			var off = new Howl({
-			  urls: ['ltsaberoff01.wav'],
-			  autoplay: false,
-			  loop: false,
-			  volume: 0.6,
-			  onend: function() {
-			  	off.stop();
-			  }
-			});
-
-			function ligar() {
-				if (disp) {
-					disp = false;
-
-					if (!$('#laser').is(':visible')) {
-						$('#laser').show();
-						on.play();
-						$('#laser').animate({
-							width: '800px'
-						}, 400, function(){
-							disp = true;
-						});
-					}else{
-						off.play();
-						$('#laser').animate({
-							width: '0px'
-						}, 800, function(){
-							$('#laser').hide();
-							disp = true;
-						});
-					}
-				}
-			}
-
-		});
-
-	</script>
-	<style type="text/css">
-		*{
-			padding: 0px;
-			margin: 0px;
-			font-family: sans-serif;
-		}
-
-		html{
-			background: #000000;
-			min-height: 100%;
-		}
-
-		body{
-			width: 1024px;
-			margin: auto;
-			padding-top: 30px;
-		}
-
-		h1{
-			color: #ffffff;
-			font-variant: small-caps;
-			font-size: 40px;
-			text-align: center;
-			margin: 20px;
-			margin-bottom: 50px;
-			text-shadow: 0px 0px 20px #ff4444;
-		}
-
-		#punho{
-			float: left;
-		}
-
-		#imagem-punho{
-			width: 200px;
-			cursor: pointer;
-		}
-
-		#laser{
-			width: 0px;
-			background: #e7eeff;
-			height: 16px;
-			margin-top: 19px;
-			float: left;
-			border-left: none;
-			border-top-right-radius: 20px;
-			border-bottom-right-radius: 20px;
-			box-shadow: 0px 0px 50px 5px #0066ff;
-		}
-
-		#rodape{
-			font-style: italic;
-			font-size: 20px;
-			color: #ffffff;
-			clear: both;
-			margin-top: 200px;
-			text-align: center;
-		}
-	</style>
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+		<link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
 
 	<div id="header">
 		<h1>a lightsaber</h1>
 	</div>
+	
 
 	<div id="punho"><img id="imagem-punho" src="sabre.png" /></div>
 
 	<div id="laser"></div>
 
 	<div id="rodape">Created by Lucas Cortez Gresele</div>
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/lightsaber.js"></script>
 </body>
 </html>

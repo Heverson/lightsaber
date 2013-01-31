@@ -1,0 +1,64 @@
+*{
+	padding: 0px;
+	margin: 0px;
+	font-family: sans-serif;
+}
+
+html{
+	background: #000000;
+	min-height: 100%;
+}
+
+body{
+	width: 1024px;
+	margin: auto;
+	padding-top: 30px;
+}
+
+@font-face {
+	font-family:"STARWARS";src:url("../font/STARWARS.eot?") format("eot"),
+								url("../font/STARWARS.woff") format("woff"),
+								url("../font/STARWARS.ttf") format("truetype"),
+								url("../font/STARWARS.svg#STARWARS") format("svg");
+	font-weight:normal;font-style:normal;}
+
+h1{
+	color: #ffffff;
+	font-family: "STARWARS",sans-serif;
+	font-variant: small-caps;
+	font-size: 80px;
+	text-align: center;
+	margin: 20px;
+	margin-bottom: 50px;
+	text-shadow: 0px 0px 20px #ff4444;
+}
+
+#punho{
+	float: left;
+}
+
+#imagem-punho{
+	width: 200px;
+	cursor: pointer;
+}
+
+#laser{
+	width: 0px;
+	background: #ffffff;
+	height: 20px;
+	margin-top: 17px;
+	float: left;
+	border-top-right-radius: 20px;
+	border-bottom-right-radius: 20px;
+	box-shadow: 0px 0px 40px 5px #0011ff;
+}
+
+#rodape{
+	font-style: italic;
+	font-size: 20px;
+	color: #ffffff;
+	text-shadow: 0px 0px 40px #00ff11;
+	clear: both;
+	margin-top: 200px;
+	text-align: center;
+}
